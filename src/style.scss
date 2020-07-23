@@ -1,0 +1,165 @@
+.custom-form-card {
+    margin: 1em 0;
+
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.custom-form {
+    margin: 1.5em;
+
+    div:nth-child(2) {
+        margin-bottom: 2em;
+    }
+
+    div:nth-child(4) {
+        margin: 2em 0 1em 0;
+    }
+
+    label:nth-child(5) {
+        margin: 1.5em 0 0 0;
+    }
+
+    div:nth-child(6) {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+    }
+}
+
+.important {
+    color: red;
+    padding-left: 0.5em;
+}
+
+.review-list-heading {
+    margin: 3em 0 2em 0;
+
+    .badge-pill {
+        font-size: 0.8em;
+    }
+}
+
+#root {
+    .card {
+        margin-bottom: 1.5em;
+    }
+}
+
+.pagenumbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        margin: 0 0.2em 2em 0;
+        padding: .75rem 1.5rem;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        color: #007bff;
+        background-color: white;
+        border: 1px solid #dee2e6;
+        border-radius: 0.25em;
+        transition: 0.4s;
+        
+    }
+    button:hover {
+        background-color: #dee2e6;
+    }
+    .active {
+        background-color: #007bff;
+        color: white;
+        border:  #007bff;
+    }
+}
+
+
+
+// rating stars 
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+
+.rating>input {
+    display: none
+}
+
+.rating>label {
+    position: relative;
+    width: 1em;
+    font-size: 2.5em;
+    color: #FFD600;
+    cursor: pointer
+}
+
+.rating>label::before {
+    content: "\2605";
+    position: absolute;
+    opacity: 0
+}
+
+.rating>label:hover:before,
+.rating>label:hover~label:before {
+    opacity: 1 !important
+}
+
+.rating>input:checked~label:before {
+    opacity: 1
+}
+
+.rating:hover>input:checked~label:before {
+    opacity: 0.4
+}
+
+
+@media (max-device-width: 400px) {
+    .custom-form {
+        margin: 1em;
+    }
+
+    .custom-form {
+        margin: 1.5em;
+
+        div:nth-child(2) {
+            margin-bottom: 0.75em;
+        }
+
+        div:nth-child(4) {
+            margin: 1em 0 0.75em 0;
+        }
+
+        label:nth-child(5) {
+            margin: 1em 0 0 0;
+        }
+
+    }
+
+    .card-body {
+        p {
+            font-size: 0.75em;
+        }
+    }
+
+    .review-list-heading {
+        h2 {
+            font-size: 1.75em;
+        }
+    }
+    .pagenumbers {
+
+        button {
+            margin: 0 0.1em 1em 0;
+            padding: 0.6rem 0.8rem;
+            font-size: 1rem;
+            line-height: 0.5;
+            border-radius: 0.15em;
+        }
+    }
+}
+    
